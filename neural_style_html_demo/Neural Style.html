@@ -1,64 +1,64 @@
 <!DOCTYPE html>
-
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./Neural Style_files/css" rel="stylesheet" type="text/css">
-    <link href="./Neural Style_files/bootstrap.min.css" rel="stylesheet">
-    <link href="./Neural Style_files/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="./Neural Style_files/jquery-2.0.3.min.js"></script><style type="text/css"></style>
-    <script type="text/javascript" src="./Neural Style_files/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="./Neural Style_files/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./Neural Style_files/bootstrap-slider.js"></script>
-    <link rel="stylesheet" href="./Neural Style_files/jquery-ui.css">
-    <link rel="stylesheet" href="./Neural Style_files/font-awesome.min.css">
-    <link rel="stylesheet" href="./Neural Style_files/bootstrap-slider.css">
-    <link rel="stylesheet" href="./Neural Style_files/font-awesome.min(1).css">
-    
-    <script src="./Neural Style_files/slider.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap-slider.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Neural Style</title>
+    <script src="javascripts/slider.js"></script>
   </head>
   <body>
     <div id="picasso-gogh" class="row centered-row img-container">
       <h4>Stata in the style of Picasso's "Dora Maar" and Van Gogh's "The Starry Night"</h4>
       <div class="row">
-        <button class="btn btn-default" id="content-input-1" data-placement="bottom" data-original-title="" title="">Content Input</button>
-        <button class="btn btn-default" id="style-input1-1" data-placement="bottom" data-original-title="" title="">Style Input 1</button>
-        <button class="btn btn-default" id="style-input2-1" data-placement="bottom" data-original-title="" title="">Style Input 2</button>
+        <button class="btn btn-default" id="content-input-1" data-placement="bottom">Content Input</button>
+        <button class="btn btn-default" id="style-input1-1" data-placement="bottom">Style Input 1</button>
+        <button class="btn btn-default" id="style-input2-1" data-placement="bottom">Style Input 2</button>
       </div>
       <div>
-        <img class="multi-style-img multi-style-shown" src="./Neural Style_files/sps100.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps90.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps80.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps70.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps60.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps50.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps40.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps30.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps20.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps10.jpg">
-        <img class="multi-style-img" src="./Neural Style_files/sps0.jpg">
+        <img class="multi-style-img multi-style-shown" src="images/sps100.jpg">
+        <img class="multi-style-img" src="images/sps90.jpg">
+        <img class="multi-style-img" src="images/sps80.jpg">
+        <img class="multi-style-img" src="images/sps70.jpg">
+        <img class="multi-style-img" src="images/sps60.jpg">
+        <img class="multi-style-img" src="images/sps50.jpg">
+        <img class="multi-style-img" src="images/sps40.jpg">
+        <img class="multi-style-img" src="images/sps30.jpg">
+        <img class="multi-style-img" src="images/sps20.jpg">
+        <img class="multi-style-img" src="images/sps10.jpg">
+        <img class="multi-style-img" src="images/sps0.jpg">
       </div>
-      <div class="slider slider-horizontal" id=""><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 0%;"></div><div class="slider-track-high" style="right: 0px; width: 100%;"></div><div class="slider-handle min-slider-handle round" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0" style="left: 0%;"></div><div class="slider-handle max-slider-handle round hide" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0" style="left: 0%;"></div></div><div class="tooltip tooltip-main top" role="presentation" style="left: 0%; margin-left: -86.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">0% Van Gogh, 100% Picasso</div></div><div class="tooltip tooltip-min top" role="presentation" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max top" role="presentation" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><div id="multi-style-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="0" data-value="0" value="0" style="display: none;"></div>
+      <div id="multi-style-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="0"></div>
       <p>Slide to change the style blend weights used to generate the image.</p>
     </div>
     <div id="marilyn-picasso" class="row centered-row img-container">
       <h4>Marilyn Monroe in the style of Picasso's The Dream</h4>
       <div class="row">
-        <button class="btn btn-default" id="content-input-2" data-placement="bottom" data-original-title="" title="">Content Input</button>
-        <button class="btn btn-default" id="style-input-2" data-placement="bottom" data-original-title="" title="">Style Input</button>
+        <button class="btn btn-default" id="content-input-2" data-placement="bottom">Content Input</button>
+        <button class="btn btn-default" id="style-input-2" data-placement="bottom">Style Input</button>
       </div>
       <div>
-        <img class="mp-img mp-shown" src="./Neural Style_files/mp1.jpg">
-        <img class="mp-img" src="./Neural Style_files/mp5.jpg">
-        <img class="mp-img" src="./Neural Style_files/mp10.jpg">
-        <img class="mp-img" src="./Neural Style_files/mp50.jpg">
-        <img class="mp-img" src="./Neural Style_files/mp100.jpg">
-        <img class="mp-img" src="./Neural Style_files/mp500.jpg">
-        <img class="mp-img" src="./Neural Style_files/mp1000.jpg">
-        <img class="mp-img" src="./Neural Style_files/mp5000.jpg">
+        <img class="mp-img mp-shown" src="images/mp1.jpg">
+        <img class="mp-img" src="images/mp5.jpg">
+        <img class="mp-img" src="images/mp10.jpg">
+        <img class="mp-img" src="images/mp50.jpg">
+        <img class="mp-img" src="images/mp100.jpg">
+        <img class="mp-img" src="images/mp500.jpg">
+        <img class="mp-img" src="images/mp1000.jpg">
+        <img class="mp-img" src="images/mp5000.jpg">
       </div>
-      <div class="slider slider-horizontal" id=""><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 0%;"></div><div class="slider-track-high" style="right: 0px; width: 100%;"></div><div class="slider-handle min-slider-handle round" role="slider" aria-valuemin="1" aria-valuemax="8" aria-valuenow="1" tabindex="0" style="left: 0%;"></div><div class="slider-handle max-slider-handle round hide" role="slider" aria-valuemin="1" aria-valuemax="8" aria-valuenow="1" tabindex="0" style="left: 0%;"></div></div><div class="tooltip tooltip-main top" role="presentation" style="left: 0%; margin-left: -65.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">alpha/beta value: 1e1</div></div><div class="tooltip tooltip-min top" role="presentation" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max top" role="presentation" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div><div id="mp-slider" type="text" data-slider-min="1" data-slider-max="8" data-slider-step="1" data-slider-value="1" data-value="1" value="1" style="display: none;"></div>
+      <div id="mp-slider" type="text" data-slider-min="1" data-slider-max="8" data-slider-step="1" data-slider-value="1"></div>
       <p>Slide to change the ratio of content weight to style weight (alpha/beta)</p>
     </div>
-
-
-</body></html>
+  </body>
+</html>
