@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#multi-style-slider {
+}
+
+.multi-style-img, .mp-img {
+  margin: auto;
+  display: none;
+}
+.multi-style-shown, .mp-shown {
+  display: block;
+}
+
+.centered-row {
+  text-align: center;
+}
+
+.img-container {
+  margin: 40px 0px;
+}
+
+#github-btn {
+  font-size: 28px;
+  margin-top: -5px;
+  padding: 0px 8px;
+}
+
+.slider {
+  height: 50px !important;
+}
+
+video {
+  margin-bottom: 40px;
+}
+
