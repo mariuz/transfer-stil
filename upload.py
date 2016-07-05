@@ -20,9 +20,9 @@ ITERATIONS = 1000
 VGG_PATH = 'imagenet-vgg-verydeep-19.mat'
 initial = None
 
-UPLOAD_FOLDER = '/home/mariuz/Work/neural-style/uploads'
-OUTPUT_FOLDER = '/home/mariuz/Work/neural-style/output'
-STYLE_FOLDER ='/home/mariuz/Work/neural-style/examples'
+UPLOAD_FOLDER = './uploads'
+OUTPUT_FOLDER = './output'
+STYLE_FOLDER ='./examples'
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
