@@ -1,19 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="T0BqcCmdhvhHOWW8GP243SzfzqXrZKI7GDi5bWxDtFQ" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Artificial intelligence turning your photos into art">
-    <meta name="keywords" content="neural style, deep art, deepart, neural-style, artificial art, neural art, deep learning, instagram filters, filters, van gogh, painting from photos">
     <title>Create a new artwork</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,300,400italic,300italic,600,600italic,700,700italic,800italic' rel='stylesheet' type='text/css'>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://deepart-io.s3.amazonaws.com/CACHE/css/cebc69459850.css" type="text/css" />
+    <link rel="stylesheet" href="./css/cebc69459850.css" type="text/css" />
 
-    <link rel="stylesheet" href="https://deepart-io.s3.amazonaws.com/CACHE/css/44ccd66c877e.css" type="text/css" />
+    <link rel="stylesheet" href="./css/44ccd66c877e.css" type="text/css" />
 
 
 
@@ -76,7 +72,7 @@
                 </div>
             </div>
             <div id="upload-photo" class="tab-pane fade in active">
-                <form enctype="multipart/form-data" method="post" id="content-image-form" class="dropzone needsclick dz-clickable selected" action="/image/upload/content" data-hash="">
+                <form enctype="multipart/form-data" method="post" id="content-image-form" class="dropzone needsclick dz-clickable selected" action="http://localhost:5000/image/upload/content" data-hash="">
                     <div class="dz-message needsclick">
                         <p>Drop your photo here or<br />click to select one from your computer.</p>
                     </div>
@@ -104,7 +100,7 @@
 
 
 
-                <div class="col-xs-4 img" data-hash="1">
+                <div class="col-xs-4 img" data-hash="1-style.jpg">
                     <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
                     <div class="res-info">
                         <span class="glyphicon glyphicon-star"></span>
@@ -119,7 +115,7 @@
 
 
 
-                <div class="col-xs-4 img" data-hash="2">
+                <div class="col-xs-4 img" data-hash="2-style.jpg">
                     <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
                     <div class="res-info">
                         <span class="glyphicon glyphicon-star"></span>
@@ -134,63 +130,14 @@
 
 
 
-                <div class="col-xs-4 img" data-hash="78626e2087425f49cf5893176ec842c52483d3b6">
+                <div class="col-xs-4 img" data-hash="3-style.jpg">
                     <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
                     <div class="res-info">
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                     </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
-                </div>
-
-
-        </div>
-
-        <div class="row">
-
-
-
-
-
-                <div class="col-xs-4 img" data-hash="f9e85288e1bd8f09245b2774c8d563dd7cc52c9a">
-                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
-                    <div class="res-info">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                    </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
-                </div>
-
-
-
-
-
-
-                <div class="col-xs-4 img" data-hash="4814043d473b53df269de89cc0aab24b0c5fd77c">
-                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
-                    <div class="res-info">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                    </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
-                </div>
-
-
-
-
-
-
-                <div class="col-xs-4 img" data-hash="5fc06d857b15591a5d60495e91bddabc00732958">
-                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
-                    <div class="res-info">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                    </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
+                    <a href="#"><img src="./examples/3-style.jpg" class="img-responsive"/></a>
                 </div>
 
 
@@ -202,14 +149,63 @@
 
 
 
-                <div class="col-xs-4 img" data-hash="460cec93aaf8d16bfe43659c5e318fd750c8c038">
+                <div class="col-xs-4 img" data-hash="4-style.jpg">
                     <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
                     <div class="res-info">
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                     </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
+                    <a href="#"><img src="./examples/4-style.jpg" class="img-responsive"/></a>
+                </div>
+
+
+
+
+
+
+                <div class="col-xs-4 img" data-hash="5-style.jpg">
+                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
+                    <div class="res-info">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <a href="#"><img src="./examples/5-style.jpg" class="img-responsive"/></a>
+                </div>
+
+
+
+
+
+
+                <div class="col-xs-4 img" data-hash="6-style.jpg">
+                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
+                    <div class="res-info">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <a href="#"><img src="./examples/6-style.jpg" class="img-responsive"/></a>
+                </div>
+
+
+        </div>
+
+        <div class="row">
+
+
+
+
+
+                <div class="col-xs-4 img" data-hash="7-style.jpg">
+                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
+                    <div class="res-info">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <a href="#"><img src="./examples/7-style.jpg" class="img-responsive"/></a>
                 </div>
 
 
@@ -224,7 +220,7 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                     </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
+                    <a href="#"><img src="./examples/8-style.jpg" class="img-responsive"/></a>
                 </div>
 
 
@@ -239,7 +235,7 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                     </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
+                    <a href="#"><img src="./examples/9-style.jpg" class="img-responsive"/></a>
                 </div>
 
 
@@ -258,7 +254,7 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                     </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
+                    <a href="#"><img src="./examples/10-style.jpg" class="img-responsive"/></a>
                 </div>
 
 
@@ -273,7 +269,7 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                     </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
+                    <a href="#"><img src="./examples/11-style.jpg" class="img-responsive"/></a>
                 </div>
 
 
@@ -281,14 +277,14 @@
 
 
 
-                <div class="col-xs-4 img" data-hash="47321af6a3c4eaae9b499bfd8fc47dc01656cf4f">
+                <div class="col-xs-4 img" data-hash="12-style.jpg">
                     <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
                     <div class="res-info">
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                     </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
+                    <a href="#"><img src="./examples/12-style.jpg" class="img-responsive"/></a>
                 </div>
 
 
@@ -300,7 +296,22 @@
 
 
 
-                <div class="col-xs-4 img" data-hash="afe90bb2e7b67b57c55a075e48a954615533ff75">
+                <div class="col-xs-4 img" data-hash="13-style.jpg">
+                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
+                    <div class="res-info">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <a href="#"><img src="./examples/13-style.jpg" class="img-responsive"/></a>
+                </div>
+
+
+
+
+
+
+                <div class="col-xs-4 img" data-hash="14-style.jpg">
                     <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
                     <div class="res-info">
                         <span class="glyphicon glyphicon-star"></span>
@@ -315,22 +326,7 @@
 
 
 
-                <div class="col-xs-4 img" data-hash="33ab1754a880a44ea3b5a912d23c620ff1fdc46d">
-                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
-                    <div class="res-info">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                    </div>
-                    <a href="#"><img src="./examples/2-style.jpg" class="img-responsive"/></a>
-                </div>
-
-
-
-
-
-
-                <div class="col-xs-4 img" data-hash="3746b62395950c3ad05a6327e3e66fbca035a3c3">
+                <div class="col-xs-4 img" data-hash="15-style.jpg">
                     <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
                     <div class="res-info">
                         <span class="glyphicon glyphicon-star"></span>
@@ -342,56 +338,6 @@
 
 
         </div>
-
-        <div class="row">
-
-
-
-
-
-                <div class="col-xs-4 img" data-hash="2b269d70a92cce147b4b4cd46bf139057d9d63f6">
-                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
-                    <div class="res-info">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                    </div>
-                    <a href="#"><img src="https://deepart-io.s3.amazonaws.com/cache/b5/a6/b5a66cabf7846f3fb918a7e208574c04.jpg" class="img-responsive"/></a>
-                </div>
-
-
-
-
-
-
-                <div class="col-xs-4 img" data-hash="9255cf5e0573d1d6a777d2b2176635a3fa22b8bb">
-                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
-                    <div class="res-info">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                    </div>
-                    <a href="#"><img src="https://deepart-io.s3.amazonaws.com/cache/76/24/7624ee7402e2d223d52832b0eb42b76d.jpg" class="img-responsive"/></a>
-                </div>
-
-
-
-
-
-
-                <div class="col-xs-4 img" data-hash="2d8013478f7c2a5b51a1b0da0164af05fa5dad8f">
-                    <div class="overlay"><span class="glyphicon glyphicon-ok"></span></div>
-                    <div class="res-info">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                    </div>
-                    <a href="#"><img src="https://deepart-io.s3.amazonaws.com/cache/d7/83/d7834642ff5557f33f43c412a9aa95c4.jpg" class="img-responsive"/></a>
-                </div>
-
-
-        </div>
-
 
 
                 </div>
@@ -415,9 +361,9 @@
     </div>
 </div>
 
-<form onsubmit="submitform(this);return false" style="margin-top: 30px" method="post" class="form-horizontal">
+<form action="/process_form" style="margin-top: 30px" method="post" class="form-horizontal">
     <input id="id_content_img" maxlength="40" name="content_img" type="hidden" />
-<input id="id_style_img" maxlength="40" name="style_img" type="hidden" />
+    <input id="id_style_img" maxlength="40" name="style_img" type="hidden" />
 <!--<div class="form-group"><label class="col-md-3 control-label" for="id_email">e-mail</label><div class="col-md-9"><input class="form-control" id="id_email" name="email" onchange="user_exists()" onkeyup="user_exists()" placeholder="e-mail" title="" type="email" /></div></div>
 <div class="form-group"><label class="col-md-3 control-label" for="id_password">password</label><div class="col-md-9"><input class="form-control" id="id_password" name="password" placeholder="password" title="" type="password" /></div></div>
 -->
@@ -447,17 +393,17 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <h1>Media</h1>
                     <ul class="list-unstyled">
-                        <li><a href="https://drive.google.com/folderview?id=0B1LqBy9VFpHYTnBRQkFvNC1MNlE&usp=sharing" target="_blank">Presskit</a></li>
-                        <li><a href="http://blog.dev-io.ro" target="_blank">Blog</a></li>
+                        <li><a href="" target="_blank">Presskit</a></li>
+                        <li><a href="" target="_blank">Blog</a></li>
                         <li><a href="/page/about/">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <h1>Social</h1>
-                    <a href="https://www.facebook.com/dev-io.ro/" class="btn-social btn-facebook btn btn-sm"><span class="fa fa-facebook"></span>Like</a>
-                    <a href="https://twitter.com/deepart_io/" class="btn-social btn-twitter btn btn-sm"><span class="fa fa-twitter"></span>Follow</a>
-                    <a href="https://www.instagram.com/deepart_io/" class="btn-social btn-instagram btn btn-sm"><span class="fa fa-instagram"></span>Follow</a>
-                    <a href="https://plus.google.com/102812444889019442295" class="btn-social btn-google btn btn-sm"><span class="fa fa-google"></span>Follow</a>
+                    <a href="https://www.facebook.com/" class="btn-social btn-facebook btn btn-sm"><span class="fa fa-facebook"></span>Like</a>
+                    <a href="https://twitter.com/" class="btn-social btn-twitter btn btn-sm"><span class="fa fa-twitter"></span>Follow</a>
+                    <a href="https://www.instagram.com/" class="btn-social btn-instagram btn btn-sm"><span class="fa fa-instagram"></span>Follow</a>
+                    <a href="https://plus.google.com/" class="btn-social btn-google btn btn-sm"><span class="fa fa-google"></span>Follow</a>
 
                 </div>
             </div>
@@ -465,17 +411,10 @@
     </footer>
 
 
-    <script type="text/javascript" src="https://deepart-io.s3.amazonaws.com/CACHE/js/ad004c2f14b6.js"></script>
+    <script type="text/javascript" src="./js/ad004c2f14b6.js"></script>
 
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://deepart-io.s3.amazonaws.com/js/dropzone.js"></script>
-
-
-        <script type=text/javascript>
-            $('#id_password').parents('.form-group:first').hide();
-            user_exists();
-        </script>
-
+    <script src="./js/dropzone.js"></script>
 
     <script type=text/javascript>
         // Set up Dropzone

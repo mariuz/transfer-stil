@@ -2,6 +2,7 @@ import os
 from flask import Flask, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
+from flask import render_template
 
 import numpy as np
 import scipy.misc
@@ -16,7 +17,7 @@ STYLE_WEIGHT = 1e2
 TV_WEIGHT = 1e2
 LEARNING_RATE = 1e1
 STYLE_SCALE = 1.0
-ITERATIONS = 1000
+ITERATIONS = 1
 VGG_PATH = 'imagenet-vgg-verydeep-19.mat'
 initial = None
 
@@ -24,19 +25,66 @@ UPLOAD_FOLDER = './uploads'
 OUTPUT_FOLDER = './output'
 STYLE_FOLDER ='./examples'
 
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 app = Flask(__name__)
 app.debug = True
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['STYLE_FOLDER'] = STYLE_FOLDER
 app.config['OUTPUT_FOLDER'] = OUTPUT_FOLDER
+app.config['STATIC_FOLDER'] = 'static'
 
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+@app.route('/image/upload/content', methods=['POST'])
+def upload_content():
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'image' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['image']
+        # if user does not select file, browser also
+        # submit a empty part without filename
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    return '''
+    '''
+@app.route('/image/upload/style', methods=['POST'])
+def upload_style():
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'image' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['image']
+        # if user does not select file, browser also
+        # submit a empty part without filename
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['STYLE_FOLDER'], filename))
+    return '''
+    '''
+@app.route('/process_form', methods=['POST'])
+def process_form():
+    content_img=request.form['content_img']
+    style_img=request.form['style_img']
+
+    return content_img
 
 @app.route('/', methods=['GET', 'POST'])
+def index():
+ return render_template('index.html')
+
+@app.route('/demo', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         # check if the post request has the file part
@@ -74,7 +122,7 @@ def process_file(filename, style = None):
     content_image = imread(os.path.join(app.config['UPLOAD_FOLDER'], filename))
     style_images = [imread(os.path.join(app.config['STYLE_FOLDER'], style))]
 
-    return send_from_directory(app.config['OUTPUT_FOLDER'], filename)
+    #return send_from_directory(app.config['OUTPUT_FOLDER'], filename)
 
 
     target_shape = content_image.shape
@@ -100,7 +148,7 @@ def process_file(filename, style = None):
         print_iterations=None,
         checkpoint_iterations=None
     ):
-        output_file = app.config['OUTPUT_FOLDER'], filename
+        output_file = os.path.join(app.config['OUTPUT_FOLDER'], filename)
         imsave(output_file, image)
 
 
@@ -114,3 +162,17 @@ def imread(path):
 def imsave(path, img):
     img = np.clip(img, 0, 255).astype(np.uint8)
     scipy.misc.imsave(path, img)
+
+@app.route('/examples/<filename>')
+def style_file(filename):
+    return send_from_directory(app.config['STYLE_FOLDER'],
+                               filename)
+@app.route('/js/<filename>')
+def static_folder_js(filename):
+    return send_from_directory(os.path.join(app.config['STATIC_FOLDER'],'js'),
+                               filename)
+
+@app.route('/css/<filename>')
+def static_folder_css(filename):
+    return send_from_directory(os.path.join(app.config['STATIC_FOLDER'],'css'),
+                               filename)
